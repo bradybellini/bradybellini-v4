@@ -21,13 +21,15 @@
 </head>
 
 <body class="bg-retro-black">
+
     {% include "./partials/header.html" %}
+
     <div class="max-w-4xl mx-auto">
 
 
         {{ content | safe }}
         {% include "./partials/footer.html" %}
-        
+
         <script src="/static/js/alpine.js"></script>
 
         {% if path == "home" %}
