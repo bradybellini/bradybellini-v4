@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {{title}} | Brady Bellini
+  </title>
+  {% if description %}
+  <meta name="description" content="{{description}}" />
+  {% endif %}
+  {% block head %}{% endblock %}
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+  {% if prism == true %}
+  <link rel="stylesheet" type="text/css" href="/static/css/prism-duotone-dark.css">
+  {% endif %}
+</head>
+
+<body class="home-body">
+
+  <div class="">
+    <div class="flex justify-center">
+      <div class="bg-vhs-light w-425 h-750 pl-4 mt-10 shadow-lg">
+        <h2 class="text-5xl flex-nowrap pr-14 pt-3">
+          <a href="#" class="font-sans-serif font-bold ">BRADY BELLINI</a>
+        </h2>
+        <div class="flex font-sans-serif text-xl">
+          <a class="pr-3" href="#">Blog</a>
+          <a class="pr-3" href="#">Projects</a>
+          <a class="pr-3" href="#">About</a>
+        </div>
+        <div class="font-serif mt-44">
+          <p class="text-xl italic">Internet Explorer</p>
+          <p class="text-6xl">Mar-2021</p>
+        </div>
+        <div class="mt-80 ml-16">
+          <p class="font-sans-serif font-bold">WORLD WIDE WEB</p>
+          <div  class="-mt-2 text-sm">
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+          </div>
+          <div class="-mt-2 text-sm">
+            <small class="text-gray-500">Copyright ©
+              {{ helpers.currentYear() }} {{settings.name}}
+            </small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="/static/js/alpine.js"></script>
+
+    {% if path == "home" %}
+    <!-- Netlify Identity Widget -->
+    <!-- Needed only if you are using Netlify Identity feature -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% endif %}
+
+
+  </div>
+</body>
+
+</html>

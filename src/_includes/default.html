@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" class="dark">
+
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      {{title}} | Brady Bellini
+        {{title}} | Brady Bellini
     </title>
     {% if description %}
-      <meta name="description" content="{{description}}"/>
+    <meta name="description" content="{{description}}" />
     {% endif %}
     {% block head %}{% endblock %}
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/prism-vsc-dark-plus.css">
     {% endif %}
-  </head>
-  <body>
-    {% include "./partials/navbar.html" %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
 
-    {{ content | safe }}
+<body class="bg-retro-black">
+    {% include "./partials/header.html" %}
+    <div class="max-w-4xl mx-auto">
 
-    {% include "./partials/footer.html" %}
 
-    <script src="/static/js/alpine.js"></script>
+        {{ content | safe }}
+        {% include "./partials/footer.html" %}
+        
+        <script src="/static/js/alpine.js"></script>
 
-    {% if path == "home" %}
-      <!-- Netlify Identity Widget -->
-      <!-- Needed only if you are using Netlify Identity feature -->
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    {% endif %}
+        {% if path == "home" %}
+        <!-- Netlify Identity Widget -->
+        <!-- Needed only if you are using Netlify Identity feature -->
+        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {% endif %}
+    </div>
+</body>
 
-  </body>
 </html>

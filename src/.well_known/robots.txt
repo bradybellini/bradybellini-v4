@@ -1,0 +1,5 @@
+# https://github.com/bradybellini
+# hi (╯°□°）╯︵ ┻━┻) (•_•)
+
+User-agent: *
+Allow: /

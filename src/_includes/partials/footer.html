@@ -1,9 +1,10 @@
-<footer class="{{ 'fixed' if path == 'home' }} bottom-0 text-center w-full py-4">
-    <small class="text-gray-500">Copyright ©
-        {{settings.name}}
-        2020. Made with ❤ by
-        <a href="{{settings.url}}" target="_blank" class="underline">{{settings.author}}</a>
+<footer class="bottom-0 text-center font-sans-serif text-gray-100 m-4 p-5">
+    <div >
+        <a href="#" class="text-retro-yellow hover:text-gray-100">Contact</a> | <a href="#" class="text-retro-yellow hover:text-gray-100">Privacy</a> | <a href="#" class="text-retro-yellow hover:text-gray-100">About</a>
+    </div>
+    <small class="text-gray-100">Copyright ©
+        {{ helpers.currentYear() }} {{settings.name}}
         •
-        <a href="https://github.com/surjithctly/neat-starter" class="underline" target="_blank" rel="noopener">View on Github</a>
+        <a href="https://github.com/bradybellini/bradybellini-v4" class="underline hover:text-retro-yellow text-gray-100" target="_blank" rel="noopener">View on Github</a>
     </small>
 </footer>

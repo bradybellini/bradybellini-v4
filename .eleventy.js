@@ -2,6 +2,7 @@ const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -9,6 +10,9 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
+  
+  // Adds RSS to the site
+  eleventyConfig.addPlugin(pluginRss);
 
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -34,8 +38,8 @@ module.exports = function (eleventyConfig) {
     "./_tmp/static/css/style.css": "./static/css/style.css",
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-tomorrow.css":
-      "./static/css/prism-tomorrow.css",
+    "./node_modules/prismjs/themes/prism-vsc-dark-plus.css":
+      "./static/css/prism-duotone-dark.css",
   });
 
   // Copy Image Folder to /_site
