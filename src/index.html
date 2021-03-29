@@ -10,9 +10,10 @@ pagination:
 permalink: "/{% if pagination.pageNumber > 0 %}page={{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
-<div>
+<main class="max-w-4xl mx-auto">
   <div class="-mt-4">
     {% include "./_includes/partials/home.html" %}
   </div>
     {% include "./_includes/blog.html" %}
-</div>
+</main>
+
