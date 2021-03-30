@@ -1,0 +1,13 @@
+<nav >
+    <div class="text-gray-100 text-center font-sans-serif p-5 max-w-4xl">
+      <!-- {% if page.url != pagination.href.first %}
+      <a href="{{ pagination.href.first }}">First</a>
+      {% endif %} -->
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }} " class="p-2 text-retro-red">Previous</a>{% endif %}
+  {%- for pageEntry in pagination.pages %}
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" {% endif %} class="p-2 text-retro-yellow">{{ loop.index }}</a>
+  {%- endfor %}
+      {% if pagination.href.next %}<a href="{{ pagination.href.next }}" class="p-2 text-retro-red">Next</a>{% endif %}
+      <!-- {% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Last</a>{% endif %} -->
+    </div>
+  </nav>

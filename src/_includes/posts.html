@@ -3,12 +3,13 @@ layout: default
 prism: true
 ---
 
-<div class="m-auto max-w-none mt-8 mx-4 font-sans-serif">
-    <div>
-        <h1 class="text-4xl mb-4 text-gray-100">{{title}}</h1>
-        <time class="text-sm text-gray-100">Published {{ date | readableDate }}</time>
-    </div>
-    <article class="prose max-w-none">
+<div class="mx-auto max-w-4xl mt-8 font-sans-serif">
+
+    <h1 class="text-4xl mb-4 mx-4  text-gray-100">{{title}}</h1>
+    {% if date %}
+    <time class="text-sm text-gray-100 mx-4 ">Published {{ date | readableDate }}</time>
+    {% endif %}
+    <article class="prose mx-4">
 
         {{ content | safe }}
 

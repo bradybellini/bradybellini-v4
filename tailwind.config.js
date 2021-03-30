@@ -52,6 +52,7 @@ module.exports = {
         DEFAULT: {
           css: {
             color: "theme('colors.gray.200')",
+            maxWidth: '85ch',
             a: {
               color: "theme('colors.retro-red')",
               "&:hover": {
