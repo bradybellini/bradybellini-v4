@@ -34,7 +34,7 @@ collections:
         options: ["blog", "project", "web", "hardware", "telecommunications", "networking", "gaming"]
   - label: "Projects"
     name: "project"
-    folder: "src/projects"
+    folder: "src/project"
     create: true
     summary: '{{title}} | {{month}}/{{day}}/{{year}}'
     editor:
